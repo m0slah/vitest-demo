@@ -17,5 +17,11 @@ describe("View",()=>{
         expect(view.id).toBe(viewId);
         expect(view.innerHTML).toBe(viewText);
         expect(view.nodeName).toBe("SPAN");
+
     })
+
+    it('snap shot matched', () => {
+        const wrapper=render(View,{props:{element:"div"}});
+        expect(wrapper).toMatchSnapshot();
+    });
 })
